@@ -3,9 +3,9 @@
 //    Для решения этой задачи используйте строковый метод String.substring().
 
 let dots = '...';
-function outStr(str) {
-    return (str.length >= 15)? str.substr(0,15) + dots : str;
+function outStr(str, lenghtStr) {
+    return (str.length >= lenghtStr)? str.substr(0,lenghtStr) + dots : str;
 }
 
-console.log( outStr('моя мама варит кофе')  );
-console.log( outStr('моя дома')  );
+console.log( outStr('моя мама варит кофе',15)  );
+console.log( outStr('моя дома',15)  );
