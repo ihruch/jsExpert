@@ -42,68 +42,66 @@ var data = [{
 	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	date : 1428153200637
 
-},
-// ,{
-// 	url: "desktopwallpapers.org.ua/mini/201507/40066.jpg",
-// 	name: "BMW",
-// 	id : 5,
-// 	params: {
-// 		status: true,
-// 		progress: "12"
-// 	},
-// 	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-// 	date : 1402153200637
-// },{
-// 	url: "desktopwallpapers.org.ua/mini/201507/40064.jpg",
-// 	name: "MERCEDESS",
-// 	id : 6,
-// 	params: {
-// 		status: true,
-// 		progress: "83"
-// 	},
-// 	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-// 	date : 1442153200637
-// },{
-// 	url: "desktopwallpapers.org.ua/mini/201507/40063.jpg",
-// 	name: "SKODA",
-// 	id : 7,
-// 	params: {
-// 		status: true,
-// 		progress: "49"
-// 	},
-// 	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-// 	date : 1482153200637
-// },
-{
-    url: "desktopwallpapers.org.ua/mini/201507/40069.jpg",
-    name: "CHEVROLET",
-    id : 1,
-    params: {
-        status: true,
-        progress: "80"
-    },
-    description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date : 1422153200637
- }
-// ,{
-// 	url: "desktopwallpapers.org.ua/mini/201507/40059.jpg",
-// 	name: "TOYOTA",
-// 	id : 9,
-// 	params: {
-// 		status: true,
-// 		progress: "20"
-// 	},
-// 	description : "Lorem ipsum dolor sit amet",
-// 	date : 1322153200637
-// },{
-// 	url: "desktopwallpapers.org.ua/mini/201507/40058.jpg",
-// 	name: "RENAULT",
-// 	id : 10,
-// 	params: {
-// 		status: true,
-// 		progress: "40"
-// 	},
-// 	description : "Lorem ipsum dolor sit amet",
-// 	date : 1322159200637
-// }
+}
+,{
+	url: "desktopwallpapers.org.ua/mini/201507/40066.jpg",
+	name: "BMW",
+	id : 5,
+	params: {
+		status: true,
+		progress: "12"
+	},
+	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	date : 1402153200637
+},{
+	url: "desktopwallpapers.org.ua/mini/201507/40064.jpg",
+	name: "MERCEDESS",
+	id : 6,
+	params: {
+		status: true,
+		progress: "83"
+	},
+	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	date : 1442153200637
+},{
+	url: "desktopwallpapers.org.ua/mini/201507/40063.jpg",
+	name: "SKODA",
+	id : 7,
+	params: {
+		status: true,
+		progress: "49"
+	},
+	description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	date : 1482153200637
+},{
+   url: "desktopwallpapers.org.ua/mini/201507/40069.jpg",
+   name: "CHEVROLET",
+   id : 1,
+   params: {
+       status: true,
+       progress: "80"
+   },
+   description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+   date : 1422153200637
+},{
+	url: "desktopwallpapers.org.ua/mini/201507/40059.jpg",
+	name: "TOYOTA",
+	id : 9,
+	params: {
+		status: true,
+		progress: "20"
+	},
+	description : "Lorem ipsum dolor sit amet",
+	date : 1322153200637
+},{
+	url: "desktopwallpapers.org.ua/mini/201507/40058.jpg",
+	name: "RENAULT",
+	id : 10,
+	params: {
+		status: true,
+		progress: "40"
+	},
+	description : "Lorem ipsum dolor sit amet",
+	date : 1322159200637
+}
 ]

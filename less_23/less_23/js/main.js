@@ -7,23 +7,17 @@
         delBTN = document.getElementById('delBTN'),
         count = 1,
         newArr = [],
+        settingSelectABC = '',
+        settingSelectNew = '',
         lengthData = data.length,
         sortABC = document.getElementById('type-selector'),
         sortNewItem = document.getElementById('line-selector');
 
     /*******************ПОЛУЧЕНИЕ НУЖНЫХ ДАННЫХ ДЛЯРАБОТЫ*************************/
-    function checkURL(str) {
-            return ~str.indexOf('://')? str: `http://${str}`;
-    }
-    function modifyNAME(str) {
-        return (str)?`${str[0].toUpperCase()}${str.slice(1).toLocaleLowerCase()}`: '';
-    }
-    function modifyDescription(str) {
-        return (str)? `${str.slice(0,15)}...`:'';
-    }
-    function modifyDate(number) {
-        return moment(number).format('YYYY/MM/DD hh:mm:ss')
-    }
+    let checkURL = (str) => { return ~str.indexOf('://')? str: `http://${str}`};
+    let modifyNAME = (str) => { return (str)?`${str[0].toUpperCase()}${str.slice(1).toLocaleLowerCase()}`: '' };
+    let modifyDescription = (str) => { return (str)? `${str.slice(0,15)}...`:''};
+    let modifyDate = (number) => { return moment(number).format('YYYY/MM/DD hh:mm:ss')};
     // ф -ция получения данных с объекта
     function createArray(data){
         var newConfArr = [];
@@ -61,23 +55,24 @@
     };
 
     //ф-ция вывода кол-во item на экране
-    function visibleCounter(count) {
-        counter.innerHTML = count;
-    }
+    let visibleCounter = (count) =>{ counter.innerHTML = count; }
+
     // ф-ция подсчета Item на экране
-    function disableBtn(count) {
+    let disableBtn = (count) => {
+
         if (count > lengthData) {
             btnPlay.classList.add('disabled');
             btnPlay.removeEventListener('click', init);
+        };
+
+        if (count <= lengthData) {
+            btnPlay.classList.remove('disabled');
+            btnPlay.addEventListener('click', init);
         }
-
-    }
-
+    };
 
 
-
-
-    /*******************БЛОК ОТОБРАЖЕНИЯ ГАЛЕРЕИ О ПЕРВОМУ  СЕЛЕКТУ*************************/
+    /*******************БЛОК ОТОБРАЖЕНИЯ *************************/
     //ф-ция делает выборку какие эл-ты добавлять для вывода т.е создаем второй массив который отвечает за вывод инфы
     let creatElemHtml = function (arr){
         let tempryArr = [];
@@ -105,12 +100,11 @@
             if(newArr[i].id == idDel){
                 newArr.splice(i,1);
             }
-        }
+        };
         templateCreateItem(newArr);
         disableBtn(count);
         return newArr;
     };
-
 
     /*******************БЛОК ОТОБРАЖЕНИЯ ГАЛЕРЕИ О ПЕРВОМУ  СЕЛЕКТУ*************************/
 
@@ -119,7 +113,6 @@
             let callator = new Intl.Collator();
             return arr.sort((a,b) => { return callator.compare(a.name, b.name); });
     }// end sortNameAY
-
     //ф-ция перестраивает галлерею в обратном порядке.
     let sortNameYA = (arr) =>{
             let callator = new Intl.Collator();
@@ -127,8 +120,13 @@
     }// end sortNameYA
 
     let variableSortABC = [sortNameAY, sortNameYA];
+
     function showSelectABC() {
-        let valSelect = sortABC.value;
+        if(settingSelectABC){
+            sortABC.value = settingSelectABC;
+            settingSelectABC = null;
+        };
+        let valSelect =  sortABC.value;
         switch (valSelect){
             case '0':
                 templateCreateItem( variableSortABC[0](newArr)) ; //генерит html
@@ -137,12 +135,15 @@
                 templateCreateItem( variableSortABC[1](newArr));
                 break
         }
+        localStorage.setItem('firstSelect',valSelect);
+
     }
 
     /*******************БЛОК ОТОБРАЖЕНИЯ ГАЛЕРЕИ ПО ВТОРОМУ СЕЛЕКТУ*************************/
     let defaultValue = (arr) => { alert('This default value!'); };
     let beginNewItem = (arr) =>{ return arr.sort((a,b) => {return b.date-a.date})};
     let beginOldItem = (arr) =>{ return arr.sort((a,b) => {return a.date-b.date})};
+
     let variableSortNewItem = [defaultValue, beginNewItem, beginOldItem ];
 
     function showSelectNewItem() {
@@ -168,7 +169,7 @@
         newArr = creatElemHtml(newData);
         showSelectABC();
 
-    console.log( newArr );
+        console.log( newArr );
     }// end function init
 
     /*******************Event*************************/
@@ -176,6 +177,16 @@
     result.addEventListener('click', deleteElemHtml);
     sortABC.addEventListener('change', showSelectABC);
     sortNewItem.addEventListener('change', showSelectNewItem);
+
+
+    function loadSettings() {
+        if( localStorage.getItem('firstSelect') !== null){
+            settingSelectABC = localStorage.getItem('firstSelect');
+        }
+        return settingSelectABC;
+    }
+    document.addEventListener('DOMContentLoaded', loadSettings);
+
 })();
 
 
