@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Слайдер</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="slideOne">
+                    <div class="slide__images">
+                        <div class="slide__images-wrap">
+                            <!-- <span class = "slide__image__item" style="background-image: url('img/img_1.jpg')"></span>
+                            <span class = "slide__image__item" style="background-image: url('img/img_2.jpg')"></span>
+                            <span class = "slide__image__item" style="background-image: url('img/img_3.jpg')"></span>
+                            <span class = "slide__image__item" style="background-image: url('img/img_10.jpg')"></span>
+                            -->
+                                <img src="img/900/img_1.jpg" alt="img-1">
+                                <img src="img/900/img_2.jpg" alt="img-2"> 
+                                <img src="img/900/img_3.jpg" alt="img-3">
+                                <img src="img/900/img_7.jpg" alt="img-3">
+                                <img src="img/900/img_8.jpg" alt="img-3">
+                                <img src="img/900/img_9.jpg" alt="img-4"> 
+                                <img src="img/900/img_10.jpg" alt="img-4"> 
+                                <img src="img/900/img_11.jpg" alt="img-4"> 
+                        </div>
+                    </div> 
+                    <div class="slider__controls-btn">
+                        <div class="slider__navigations">
+                            <div class="slider__navigation-item slider__navigation-prev"></div>    
+                            <div class="slider__navigation-item slider__navigation-next"></div>    
+                        </div>
+                        <ul class="slider__dots">
+                            <!-- <li class="slider__dot-item active" data-dot-slider__item="0"></li>
+                            <li class="slider__dot-item" data-dot="1"></li>
+                            <li class="slider__dot-item" data-dot="2"></li>
+                            <li class="slider__dot-item" data-dot="3"></li>
+                            <li class="slider__dot-item" data-dot="4"></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <script src="js/main.js"></script>
+    <script>
+        new Slide('.slideOne',{
+            direction: 'vertical' // vertical, horizontal
+        })
+    </script>
+    
+    <script></script>
+</body>
+</html>
