@@ -1,0 +1,57 @@
+#result{
+	margin-top: 30px;
+}
+
+.card{
+	width: 100%;
+	margin: 15px 0;
+}
+.card img{
+	width: 100%;
+	height: auto;
+}
+.card-body, 
+.card-footer{
+	padding: 20px;
+}
+.card .card-footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card-group > .btn:first-child{
+	border-radius:  5px 0px 0px 5px !important; 	
+	
+}
+.card-group > .btn:last-child{
+	border-radius: 0px 5px 5px 0px !important; 
+	position: relative;
+	left: -4px;
+}
+
+.card-footer small{
+	font-weight: bold
+}
+.box-shadow{
+	box-shadow: 0px 0px 3px #ddd;
+}
+#next-page{
+	margin: 50px 0;
+}
+.elem-add-item{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.elem-add-item .counterAvail{
+	margin-left: 10px
+}
+.dropdown{
+	margin: 10px 0;
+}
+.btn .btn-secondary .dropdown-toggle{
+	left: -22px !important;
+}
+
+
