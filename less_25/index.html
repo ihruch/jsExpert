@@ -26,25 +26,30 @@
 
     <main class="text-center" role="main">
         <form class="form-signin">
+            <div class="alert alert-danger error-msg hide" role="alert" >
+                Неправильно введен e-mail или пароль.
+            </div>
 
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" autocomplete="off">
+            <div class="input-group mb-3">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" aria-describedby="basic-addon1" >
+                <span class="input-group-addon" id="basic-addon1">@</span>
+              </div>
+
             <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" autocomplete="off">
+            <div class="input-group"></div>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autofocus="" aria-describedby="basic-addon1" >
+            </dic>    
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Remember me
+                    <input type="checkbox" value="remember-me" class="saveMe"> Remember me
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-            <div class="alert alert-danger error-msg" role="alert" hidden>
-                    Неправильно введен e-mail или пароль.
-                </div>
         </form>
-
-        <!--  -->
+          <!--  -->
         <div class="container windowInfoUser" hidden >
                 <div class="divCont  d-flex flex-column">
                     <div class="windowUserInfo flex-column">
@@ -54,15 +59,15 @@
                         <div class="body-windowUserInfo d-flex flex-row">
                             <div class="left-block d-flex flex-column">
                                 <label for="" class="h5">Логин</label>
-                                <input type="text" class="form-control inputUserInfoLogin" placeholder="" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control inputUserInfoLogin" placeholder="" aria-describedby="basic-addon2" disabled>
                             </div>
 
                             <div class="right-block d-flex flex-column">
                                 <label for="" class="h5">Пароль</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control inputUserInfoPass" placeholder="">
+                                    <input type="password" class="form-control inputUserInfoPass" placeholder="" disabled>
                                     <span class="input-group-btn">
-                                        <button class="btn btn-secondary btnShowPassword" type="button">Показать пароль</button>
+                                        <button class="btn btn-secondary btnShowPassword" type="button">Show</button>
                                     </span>
                                 </div>
                             </div>
