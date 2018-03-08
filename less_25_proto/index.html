@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Форма входа</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <main class="text-center" role="main">
+        <form class="form-signin">
+            <div class="alert alert-danger error-msg hide" role="alert" >
+                Неправильно введен e-mail или пароль.
+            </div>
+
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <div class="input-group mb-3">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" >
+                <span class="input-group-addon" >@</span>
+              </div>
+
+            <label for="inputPassword" class="sr-only">Password</label>
+            <div class="input-group"></div>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" autofocus=""  >
+            </dic>    
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me" class="saveMe"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+        </form>
+          <!--  -->
+        <div class="container windowInfoUser" hidden >
+                <div class="divCont  d-flex flex-column">
+                    <div class="windowUserInfo flex-column">
+                        <div class="head-windowUserInfo h3" flex-column>
+                            Информация о пользователе
+                        </div>        
+                        <div class="body-windowUserInfo d-flex flex-row">
+                            <div class="left-block d-flex flex-column">
+                                <label for="" class="h5">Логин</label>
+                                <input type="text" class="form-control inputUserInfoLogin" placeholder="" aria-describedby="basic-addon2" disabled>
+                            </div>
+
+                            <div class="right-block d-flex flex-column">
+                                <label for="" class="h5">Пароль</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control inputUserInfoPass" placeholder="" disabled>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary btnShowPassword" type="button">Show</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-windowUserInfo">
+                            <button class="btn btn-primary btnBackToLogForm" >Вернутся назад</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+    </main>
+
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    
+    <script src=js/service.js></script>
+    <script src=js/main.js></script>
+  </body>
+</html>
+
