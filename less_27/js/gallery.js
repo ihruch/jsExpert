@@ -12,9 +12,8 @@ let BaseGallery = function () {
 	}
 	if(localStorage.getItem('state')){ return BaseGallery._inst; }
 	BaseGallery._inst = this;
-	
+	localStorage.setItem('state',BaseGallery._inst)
 }
-
 
 
 BaseGallery.prototype = {

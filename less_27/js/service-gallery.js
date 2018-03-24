@@ -20,7 +20,6 @@ var serviceGallery = (function(){
 	};
 
 	function templateHTML(item){
-		
 		return ` <div class="col-md-4">
 				<div class="card mb-4 box-shadow">
 				<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="DEWOO" src="${item.url}" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
