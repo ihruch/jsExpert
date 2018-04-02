@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Форма входа</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">JSExpert</h5>
+        <nav class="my-2 my-md-0 mr-md-3 main-nav hide" >
+            <a class="p-2 text-dark galleryUserForm" href="#" data-menu="menuGallery">Галлерея</a>
+            <a class="p-2 text-dark infoUserForm" href="#"    data-menu="menuUserInfo">О пользователе</a>
+            <a class="btn btn-outline-primary btn-logout" href="#" data-menu="menuBtnLogOut"> Выход</a>
+        </nav>
+    </div>
+<main role="main" class="main">
+    <div class="container sectionLogPass menuBtnLogOut"  >
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <section class="" >
+                    <div class="alert alert-danger err-msg hide " role="alert" >
+                        Не правильно введен email или password.
+                    </div>
+                    <form class="form-signin">
+                        <h1 class="h3 mb-3 font-weight-normal">Пожалуйста введите логин и пароль</h1>
+                            
+                        <label for="inputEmail" class="sr-only">Email</label>
+                        <input type="text" id="inputEmail" value="mail@mail.ru"class="form-control" placeholder="Email address" required="" autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" autocomplete="off">
+                        <div class="mb-3"></div>
+                                        
+                            <label for="inputPassword" class="sr-only">Пароль</label>
+                                <input type="text" id="inputPassword" value="123" class="form-control" placeholder="Password" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" autocomplete="off">
+                                <div class="mb-3"></div>
+                                        
+                                <button class="btn btn-lg btn-primary btn-block btn-login" type="submit">Войти</button>
+                                <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+                            </form>
+                    </section>
+            </div>
+        </div>
+    </div><!-- end first section-->
+   
+    <!-- личная инфа пользователя -->
+    <div class="container blockUserInfo menuUserInfo hide" >
+        
+    </div>
+    <!-- end  личная инфа пользователя -->
+
+
+    <div class="container gallery-main-block menuGallery hide "  >
+        <div class="row">
+            <section class="jumbotron text-center">
+                <h1 class="jumbotron-heading ">Автомобильная галлерея</h1>
+                <p class="lead text-muted ">На этой странице вы можете увидеть отличную галлерею, которая дает вам возможность ознакомится с нашим каталогом транспортных средств. </p>
+                
+                <!-- <select id="typeShowGallery">
+                    <option value="0" defaulf>Simple version</option>
+                    <option value="1">Extended version</option>
+                </select> -->
+
+                <div class="text-center">
+                    <a href="#" id="next-page" class="btn btn-primary my-2 btn-next-page" data-type-btn="addBtn">Добавить картинки</a>
+                </div> 
+
+                <div class="row mb-5 block-sorting hide">
+                    <div class="col-md-6 text-right">
+                        <div class="btn-group" id="dropdown-name">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Фильтровать по имени
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#" sorting-type="AZ">Вперед: от А до Я</a>
+                                <a class="dropdown-item" href="#" sorting-type="ZA">Назад: от Я до А</a>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <div class="btn-group" id="dropdown-date">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Фильтровать по дате
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" sorting-type="beginNew" href="#">Сначала новые</a>
+                                <a class="dropdown-item" sorting-type="beginOld" href="#">Сначала старые</a>                  
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </div>
+        <div class="row" id="gallery-block" >
+           <!-- сюда вставляется галлерея -->
+        </div> 
+            
+    </div>   
+
+    <!-- модальная форма  -->
+        <form class="form-edit-data d-flex flex-column justify-content-center" >
+            <h3 class="text-center">Введите данные</h3>
+            <div class="mb-3">
+                <label for="dataUrl">URL изображения</label>
+                <label>desktopwallpapers.org.ua/mini/201507/40046.jpg</label>
+                <input type="text" class="form-control dataUrl" >
+            </div>
+            
+            <div class="mb-3">
+                <label for="dataName">Название изображения</label>
+                <label>Buick</label>
+                <input type="text" class="form-control dataName"  >
+            </div>
+
+            <div class="mb-3">
+                <label for="dataDesc">Описание изображения</label>
+                <label>Buick — американский производитель автомобилей, отделение корпорации General Motors. </label>
+                <textarea rows="3" class="form-control dataDesc"></textarea>
+            </div>
+                <input type="text" class="dataId" hidden >
+
+            <button class="btn btn-primary btnSaveData">Save</button>
+        </form>
+    <!-- модальная форма  -->  
+    
+        <div class="showLargeImg">
+            <button type="button " class="close closeWindow" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+</main>
+   
+
+       
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    
+    <script src=js/moment.js></script>
+    <script src=js/validator.js></script>
+    <script src=js/service-gallery.js></script>
+    <script src=js/service-menu.js></script>
+    <script src=js/service-user.js></script>
+    <script src=js/login.js></script>
+    <script src=js/gallery.js></script>
+    <script src=js/main.js></script>
+  </body>
+</html>
+
