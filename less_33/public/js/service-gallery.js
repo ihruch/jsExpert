@@ -8,13 +8,27 @@ var serviceGallery = (function(){
 		return result;
 	};
 
+
+	function checkURL(url){
+		return ~url.indexOf("://")?url:`http://${url}`;
+	};
+	function checkNAME(name){
+		return `${name.slice(0,1).toUpperCase()}${name.slice(1).toLowerCase()}`;
+		
+	};
+	function checkDESC(description){
+		return (description.length > 18)? `${description.slice(0,18)}...` : `${description}`;	
+	};
+	function checkDATE(date){
+		return moment(date).format('DD/MM/YYYY');
+	}
+
 	function modifyData(array){
 		array.forEach( (item) => {
-			item.url = ~(item.url.indexOf('://'))?item.url:`http://${item.url}`;
-   			item.name = `${item.name[0].toUpperCase()}${item.name.slice(1).toLowerCase()} `;
-			item.description = (item.description.length > 18)? `${item.description.slice(0,18)}...` : `${item.description}`;		
-			item.newDate = moment(item.date).format('DD/MM/YYYY');		
-					
+			item.url = checkURL(item.url);
+   			item.name = checkNAME(item.name);
+			item.description = 	checkDESC(item.description);
+			item.newDate = checkDATE(item.date);		
 		});	
 		return array;
 	};
@@ -38,14 +52,7 @@ var serviceGallery = (function(){
 				</div> 
 			</div>`;
 	}
-	function showBlock(elem){
-		elem.classList.remove('hide');
-	};
-
-	 function hideBlock(elem){
-		elem.classList.add('hide');
-	 };
-
+	
 	function sortNameAZ(a,b) {return a.email > b.email? 1 : -1 }
     function sortNameZA(a,b){return a.email > b.email? -1 : 1 }
     function sortDateAsc(a,b){return a.date - b.date}
@@ -66,8 +73,6 @@ var serviceGallery = (function(){
 		duplicateData : duplicateData,
 		modifyData : modifyData, 
 		templateCard : templateHTML,
-		showBlock : showBlock,
-		hideBlock : hideBlock,
 		inheritance : inheritance,
 		sortNameAZ : sortNameAZ,
 		sortNameZA : sortNameZA, 

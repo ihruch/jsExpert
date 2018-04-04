@@ -13,6 +13,7 @@ class CarsGallery {
 		this.dataName = document.querySelector('.dataName');
 		this.dataDesc = document.querySelector('.dataDesc');
 		this.dataId = document.querySelector('.dataId');
+		this.dataDate = document.querySelector('.dataDate');
 
 		this._marker = null;
 		this.modalForm = document.querySelector('.form-edit-data');
@@ -20,10 +21,12 @@ class CarsGallery {
         this.closeWindow = document.querySelector('.closeWindow');
 	}
 	
-	static info() {
-		if(localStorage.getItem('state')){ return CarsGallery._inst; }
+	static isInitObj() {
+		if(localStorage.getItem('state')){ 
+			return CarsGallery._inst;
+		}
 		CarsGallery._inst = this;
-		localStorage.setItem('state',CarsGallery._inst)
+		localStorage.setItem("state","true")
 	}	
 
 	getGalleryDate(){
@@ -101,11 +104,17 @@ class CarsGallery {
 	}//
 
 	// если открыты форма для редактирования заполняет поля формы.
-	fillInputFieldForm(id,event){
-		this.dataUrl.value = event.target.closest('.card').querySelector('img').src;
-		this.dataName.value = event.target.closest('.card').querySelector('.card-name').innerHTML;
-		this.dataDesc.value = event.target.closest('.card').querySelector('.card-text').innerHTML; 
-		this.dataId.value = id;
+	fillInputFieldForm(id,event){ 
+		// this.galleryDate
+		this.galleryDate.filter( (item) => {
+			if(item.id == id){
+				this.dataUrl.value = item.url;
+				this.dataName.value = item.name;
+				this.dataDesc.value = item.description;
+				this.dataId.value = item.id;
+				this.dataDate.value = item.date;
+			}
+		});
 	}
 	
 	editItemGallery(){
@@ -114,6 +123,7 @@ class CarsGallery {
 			"url": this.dataUrl.value,
 			"name": this.dataName.value,
 			"description": this.dataDesc.value,
+			"date" : this.dataDate.value,
 		}
 		 let options =  {
 		 	method : 'PUT',
@@ -151,9 +161,11 @@ class CarsGallery {
 	hideModalForm(){
 		this.modalForm.style.top = ""; // возвращаем значение которое указано в стилях чтобы скрыть форму
 		this.dataUrl.value = '';
+
 		this.dataName.value= '';
 		this.dataDesc.value = '';
 		this.dataId.value = '';
+		this.dataDate.value = '';
 
 	}//
 
@@ -185,7 +197,7 @@ class CarsGallery {
 	initComponent(){
 		this.getGalleryDate();
 		this.initListener();
-		CarsGallery.info();
+		CarsGallery.isInitObj();
 		
 	}
 }

@@ -8,9 +8,9 @@ var userData = {
 
 let validatorModule = new Validator();
 
-// let galleryModule = new BaseGallery();
+let galleryModule = new CarsGallery();
 //let galleryModule = new ExtendedGallery();
 
-let loginForm = new LoginForm(userData, validatorModule, CarsGallery); 
+let loginForm = new LoginForm(userData, validatorModule, galleryModule); 
 loginForm.initComponent();
 

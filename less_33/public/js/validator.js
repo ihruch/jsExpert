@@ -10,16 +10,24 @@ Validator.prototype = {
 		}
 	},//
 
-	 // скрывает или показывает элементы 
-	 toggleShow: function(elem){
-        elem.hidden = !elem.hidden;
+	//  // скрывает или показывает элементы 
+	//  toggleShow: function(elem){
+    //     elem.hidden = !elem.hidden;
+	// },
+	// showBlock: function(elem){
+    //    elem.classList.remove('hide');
+	// },
+	// hideBlock: function(elem){
+	//    elem.classList.add('hide');
+	// },
+	
+
+	showBlock: function(array){
+		array.forEach( (item) => item.classList.remove('hide'))
 	},
-	showBlock: function(elem){
-       elem.classList.remove('hide');
+	hideBlock: function(array){
+		array.forEach( (item) => item.classList.add('hide') )
 	},
-	hideBlock: function(elem){
-	   elem.classList.add('hide');
-    },
 
 	// ф-ция проверки если поля не заполенены
     isEmptyFields: function(email,pass){
